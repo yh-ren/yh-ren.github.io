@@ -1,0 +1,35 @@
+.animated-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+  z-index: 1;
+	width: 100%;
+	transition: all 0.3s ease-in;
+}
+
+.animated-header a {
+	font-family: Arial Black;
+	text-transform: uppercase;
+  text-decoration: none;
+	font-weight: 300;
+	font-size: 14px;
+	color: #fff;
+	transition: all 0.1s ease-in;
+}
+
+.animated-header.sticky-header {
+	padding-bottom: 25px;
+	background-color: #fff;
+	border-bottom: 0px solid #fff;
+	box-shadow: 0 0 3px 0 #bbb;
+  -moz-box-shadow: 0 0 3px 0 #bbb;
+  -webkit-box-shadow: 0 0 3px 0 #bbb;
+}
+
+.animated-header.sticky-header a {
+	color: #4a4a4a
+}
+
+.animated-header.sticky-header a:hover {
+	color: #ff881e
+}

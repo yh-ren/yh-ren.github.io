@@ -1,0 +1,58 @@
+section
+
+  .about
+    max-width: 550px
+    padding-left: 10%
+    padding-right: 15%
+    padding-top: 115px
+    padding-bottom: 130px
+    overflow: hidden
+
+    @media screen and (max-width: 1100px)
+      position: relative
+      left: 50%
+      transform: translateX(-50%)
+      padding: 30px 0 100px 0
+
+    h3
+      color: $accent
+      @extend %ab-bold-large
+      text-align: center
+      margin: 0
+
+    p
+      color: $text-general
+      font-family: Arial
+      font-size: 22px
+      text-align: center
+
+  .skills
+    float: left
+    max-width: 400px
+    padding-left: 12.5%
+    padding-top: 150px
+
+    @media screen and (max-width: 1100px)
+      float: none
+      position: relative
+      left: 50%
+      transform: translateX(-50%)
+      padding: 100px 0 30px 0
+
+    .row-1
+      display: flex
+
+    .row-2
+      display: flex
+
+    [class^="icon-"]
+      width: 75px
+      height: 75px
+      margin: 20px 0 10px 40px
+      color: $accent
+      background: #eee
+      border-radius: 50%
+      // @include transition(200ms)
+
+      // &:hover
+        transform: scale(1.2)

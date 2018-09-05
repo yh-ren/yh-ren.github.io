@@ -1,0 +1,39 @@
+.hover-tab {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-tab .hover-text {
+  visibility: hidden;
+  font-family: Arial;
+  font-size: 12px;
+  width: 50px; // default
+  background-color: #4a4a4a;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 95%;
+  left: 12px; // default
+  /* Fade in */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.hover-tab .hover-text::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #4a4a4a transparent;
+}
+
+.hover-tab:hover .hover-text {
+  visibility: visible;
+  opacity: 1;
+}

@@ -1,0 +1,16 @@
+
+title: Sabrina Ren
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Welcome to my personal website
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+
+port: 8000
+
+sass:
+  sass_dir: assets/css
+  style: :nested

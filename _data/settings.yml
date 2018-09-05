@@ -1,0 +1,5 @@
+projects:
+- {name: Ginger, folder: 'project-1'}
+- {name: Tipsy, folder: 'project-2'}
+- {name: QuickShare, folder: 'project-3'}
+- {name: About this website, folder: 'project-4'}

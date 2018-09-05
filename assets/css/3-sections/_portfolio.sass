@@ -1,0 +1,109 @@
+.alt-section
+  background: #eee
+
+  @media screen and (max-width: 900px)
+    height: 1027.52px
+
+  h3
+    @extend %ab-bold-large
+    @extend %section-title-padding
+    text-align: center
+    color: $text-general
+
+.project-section
+  overflow-x: hidden
+
+  .project-slider
+    width: 200%
+    position: relative
+    left: 0%
+    @include transition(400ms)
+
+    .overview-wrap, .details-wrap
+      width: 50%
+      float: left
+      padding: 20px 0 100px 0
+
+      .project-overview
+        max-width: 780px
+        margin: 0 auto 0
+
+        .project-unit
+          display: block
+          width: 50%
+          float: left
+          position: relative
+          padding-top: 28%
+          overflow: hidden
+
+          background:
+            position: center center
+            repeat: no-repeat
+            size: cover
+
+          @media screen and (max-width: 900px)
+            float: none
+            margin: auto
+            width: 450px
+            height: 252px
+            padding: 0
+
+          .project-title-overlay
+            position: absolute
+            top: 0%
+            bottom: 0
+            width: 100%
+            background: fade-out($light-orange-2, 0.1)
+            text-align: center
+            transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+            b
+              font-family: Arial
+              font-size: 20px
+              display: block
+              padding: 70px 50px 10px 50px
+              color: white
+              line-height: 1.2
+
+            .zoom-icon
+              cursor: pointer
+              margin: auto
+              height: 38.5px
+              width: 40px
+              color: white
+
+          &:hover .project-title-overlay
+            @extend %animation
+
+      .project-details
+        max-width: 780px
+        margin: 0 auto 0
+        position: relative
+        display: none
+
+        h2
+          text-align: center
+          color: $accent
+          @extend %ab-bold-med-large
+          font-family: Arial
+          display: block
+          line-height: 1.2
+          padding-bottom: 10px
+
+        img
+          max-width: 100%
+
+        p
+          @extend %a-regular
+
+        .icon-return
+          cursor: pointer
+          width: 30px
+          opacity: 0.5
+          margin: 0 auto -10px
+
+          path
+            fill: $text-general
+
+          &:hover
+            opacity: 1
