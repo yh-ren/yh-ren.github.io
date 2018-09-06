@@ -203,8 +203,12 @@ section .about h3, .alt-section h3, .section-contacts h3 {
 
 header {
   height: 830px;
+  width: 100%;
   background: url(../img/header-bg.png) center center;
   background-size: cover; }
+  @media screen and (min-width: 2000px) {
+    header {
+      header: 1500px; } }
   header nav {
     float: right;
     margin: 0; }
