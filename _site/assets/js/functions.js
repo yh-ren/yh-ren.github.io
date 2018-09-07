@@ -17,12 +17,12 @@ $(function(){
  });
 
  $("a[href='#about']").click(function() {
-   $("html, body").animate({ scrollTop: 770 }, "slow");
+   $("html, body").animate({ scrollTop: 850 }, "slow");
    return false;
  });
 
  $("a[href='#portfolio']").click(function() {
-   $("html, body").animate({ scrollTop: 1280 }, "slow");
+   $("html, body").animate({ scrollTop: 1300 }, "slow");
    return false;
  });
 
