@@ -17,13 +17,15 @@ $(function(){
  });
 
  $("a[href='#about']").click(function() {
-   $("html, body").animate({ scrollTop: 850 }, "slow");
-   return false;
+   $('html,body').animate({
+       scrollTop: $(".about-container").offset().top},
+       'slow');
  });
 
  $("a[href='#portfolio']").click(function() {
-   $("html, body").animate({ scrollTop: 1300 }, "slow");
-   return false;
+   $('html,body').animate({
+       scrollTop: $(".alt-section").offset().top},
+       'slow');
  });
 
  $("a[href='#contact']").click(function() {
