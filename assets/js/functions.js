@@ -29,8 +29,9 @@ $(function(){
  });
 
  $("a[href='#contact']").click(function() {
-   $("html, body").animate({ scrollTop: 1700 }, "slow");
-   return false;
+   $('html,body').animate({
+       scrollTop: $(".section-contacts").offset().top},
+       'slow');
  });
 
                               /* skills hover */
