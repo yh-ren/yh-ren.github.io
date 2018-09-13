@@ -203,7 +203,7 @@ section .about h3, .alt-section h3, .section-contacts h3 {
 
 header {
   height: 900px;
-  background: url(../img/header-bg.png) center center;
+  background: url(../img/header-bg-8.jpeg) center center;
   background-size: cover; }
   @media screen and (min-width: 1024px) {
     header {
@@ -241,6 +241,7 @@ header {
     text-align: center;
     color: #ff904c;
     font-size: 22px;
+    text-shadow: 2px 2px 10px black;
     margin: 5px; }
 
 footer {
