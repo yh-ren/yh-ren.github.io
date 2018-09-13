@@ -226,7 +226,7 @@ header {
     header nav a {
       display: inline-block;
       margin: 22px 32px 0 0;
-      color: #fff;
+      color: white;
       text-decoration: none; }
       header nav a:hover {
         color: #ff904c; }
