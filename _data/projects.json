@@ -1,0 +1,71 @@
+[
+  {
+    "title": "Mira: Kanban Board",
+    "subtitle": "Jira-style task management web application",
+    "description": {
+      "overview": "This is a functional fullstack web application inspired by Jira that utilizes a Kanban board system for task management.",
+      "features": [
+        "Kanban Board: Visualize workflows with columns representing stages Backlog, In Progress, In QA, and Done. Drag and drop functionality allows for intuitive movement of tasks between stages.",
+        "Task Management: Create, edit, and manage tasks with details like title, descriptions, and assignees (users)",
+        "User Authentication: SSO authentication for access control"
+      ],
+      "timespan": "Less than a week in August 2023",
+      "stack": "TypeScript, HTML, CSS, Next.js, PostgreSQL, GraphQL, Apollo, Prisma",
+      "integrations": "Supabase, SendGrid"
+    },
+    "media": {
+      "preview": "project-1.png",
+      "video": "project-1-vid.webm"
+    },
+    "colors": {
+      "bg": "#EBE2FF",
+      "text": "#0C0619"
+    }
+  },
+  {
+    "title": "Portfolio 2024",
+    "subtitle": "You are here &#129321;",
+    "description": {
+      "overview": "This is my personal website that I designed and implemented to showcase my projects and frontend expertise",
+      "features": [
+        "Responsive Design: Adapts seamlessly to different devices",
+        "Visually Engaging UX: Captivates with smooth animations and parallax scrolling",
+        "Project Showcase: Presents my personal projects at length"
+      ],
+      "timespan": "Does anyone ever stop updating their portfolio?",
+      "stack": "Javascript, Liquid, HTML, CSS, GSAP, Lenis, Jekyll",
+      "integrations": ""
+    },
+    "media": {
+      "preview": "project-2.png",
+      "video": ""
+    },
+    "colors": {
+      "bg": "#DDFDFA",
+      "text": "#021816"
+    }
+  },
+  {
+    "title": "Meal Plan Wizard",
+    "subtitle": "Streamlined meal plan selection service",
+    "description": {
+      "overview": "This is a simple onboarding wizard for meal plan selection inspired by Fresh Meal Plan",
+      "features": [
+        "User Signup: Validates user's email and zip code",
+        "Meal Plan Showcase: Presents available meal plans which can be added to the cart",
+        "Cart Popup: Displays all items added, allows users to edit quantities or remove items before checkout"
+      ],
+      "timespan": "~4 hours in August 2021",
+      "stack": "TypeScript, HTML, Sass, Angular",
+      "integrations": ""
+    },
+    "media": {
+      "preview": "project-3.png",
+      "video": "project-3-vid.webm"
+    },
+    "colors": {
+      "bg": "#F6FEE4",
+      "text": "#141807"
+    }
+  }
+]

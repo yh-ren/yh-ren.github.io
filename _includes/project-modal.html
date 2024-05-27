@@ -1,0 +1,60 @@
+<div class="modal__wrapper" data-modal-wrapper data-lenis-prevent>
+  <div class="modal__container" data-modal-container>
+    <div data-close-modal-trigger class="modal__close">
+      {% include icons/close.svg %}
+    </div>
+    <div class="modal__content">
+      {% for project in site.data.projects %}
+      <div data-modal-inner id="project-modal-{{ forloop.index }}" class="hide">
+        <h2 class="modal__heading">{{ project.title }}</h2>
+        <div class="modal__grid">
+          <div class="modal__grid__col">
+            {% if project.description.timeplan != "" %}
+              <div class="modal__description__group">
+                <h5>Timespan</h5>
+                <p>{{ project.description.timespan }}</p>
+              </div>
+            {% endif %}
+            {% if project.description.stack != "" %}
+              <div class="modal__description__group">
+                <h5>Stack</h5>
+                <p>{{ project.description.stack }}</p>
+              </div>
+            {% endif %}
+            {% if project.description.integrations != "" %}
+              <div class="modal__description__group">
+                <h5>Integrations</h5>
+                <p>{{ project.description.integrations }}</p>
+              </div>
+            {% endif %}
+          </div>
+          <div class="modal__grid__col">
+            {% if project.description.overview != "" %}
+              <div class="modal__description__group">
+                <h5>Overview</h5>
+                <p>{{ project.description.overview }}</p>
+              </div>
+            {% endif %}
+            {% if project.description.features.size > 0 %}
+              <div class="modal__description__group">
+                <h5>Features</h5>
+                <ul>
+                  {% for feature in project.description.features %}
+                    <li>{{ feature }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+        {% if project.media.video != "" %}
+          <div class="modal__media">
+            {% capture video_src %}/assets/img/{{ project.media.video }}{% endcapture %}
+            <video autoplay muted loop width="100%" src="{{ video_src }}"></video>
+          </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

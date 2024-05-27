@@ -1,0 +1,47 @@
+{% capture menu %}
+  <nav class="header__menu">
+    <canvas id="header__menu__background"></canvas>
+    <div class="header__menu__inner">
+      <div class="header__menu__item">
+        <span data-header-menu-link="hero">home</span>
+      </div>
+      <div class="header__menu__item">
+        <span data-header-menu-link="about">about</span>
+      </div>
+      <div class="header__menu__item">
+        <span data-header-menu-link="portfolio">portfolio</span>
+      </div>
+      <div class="header__menu__item">
+        <span data-header-menu-link="contact">contact</span>
+      </div>
+    </div>
+  </nav>
+{% endcapture %}
+
+<header class="header" role="banner">
+  <div class="mobile">
+    <div class="header__mobile">
+      <div class="header__menu__logo">
+        {% include icons/logo.svg %}
+      </div>
+      <div class="header__menu__button" data-header-menu-button>
+        <button type="button" class="btn btn--icon btn--icon-only">
+          <span class="show-menu">{% include icons/hamburger.svg %}</span>
+          <span class="hide-menu">{% include icons/close.svg %}</span>
+        </button>
+      </div>
+    </div>
+    {{ menu }}
+  </div>
+
+  <div class="desktop wrapper">
+    <div class="header__desktop">
+      <div class="header__desktop--l header__menu__logo">
+        {% include icons/logo.svg %}
+      </div>
+      <div class="header__desktop--r">
+        {{ menu }}
+      </div>
+    </div>
+  </div>
+</header>

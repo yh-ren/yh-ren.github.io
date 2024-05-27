@@ -1,0 +1,40 @@
+{% capture subtitle %}
+  <span>developer</span> 
+  <span>&middot;</span> 
+  <span>designer</span> 
+  <span>&middot;</span> 
+  <span>forward-thinker</span>
+{% endcapture %}
+
+<section id="hero"
+  class="hero__section"
+  data-offset="0"
+  data-split="0"
+  data-bg-color="#232325"
+  data-text-color="#F5F5F7"
+>
+  <div class="desktop">
+    <div class="hero__wrapper">
+      <div class="hero__inner">
+        <h1 id="title" class="hero__title">{% include icons/name-filled.svg %}</h1>
+        <div class="hero__subtitle__container">
+          <span class="hero__subtitle">{{ subtitle }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__wrapper hero__background" aria-hidden="true">
+      <canvas id="hero__background"></canvas>
+    </div>
+  </div>
+
+  <div class="mobile">
+    <div class="hero__wrapper">
+      <div class="hero__inner">
+        <h1 id="title" class="hero__title">{% include icons/name-filled.svg %}</h1>
+        <div class="hero__subtitle__container">
+          <span class="hero__subtitle">{{ subtitle }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

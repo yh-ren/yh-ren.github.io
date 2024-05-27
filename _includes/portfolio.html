@@ -1,0 +1,65 @@
+<section id="portfolio" 
+  class="portfolio__section"
+  data-offset="0"
+>
+  <div class="wrapper">
+    <div class="portfolio__wrapper desktop">
+      <div class="portfolio__previews__wrapper">
+        <div class="portfolio__previews__container">
+          {% for project in site.data.projects %}
+            <div class="portfolio__preview project-{{ forloop.index }}">
+              {% if project.image != "" %}
+                {% capture image_src %}/assets/img/{{ project.media.preview }}{% endcapture %}
+                <img class="lazy-load" src="{{ image_src }}"/>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="portfolio__content__wrapper">
+        {% for project in site.data.projects %}
+          {% capture split_id %}{{ forloop.index | plus: 1 }}{% endcapture %}
+          <div
+            class="portfolio__content"
+            data-split="{{ split_id }}"
+            data-bg-color="{{ project.colors.bg }}" 
+            data-text-color="{{ project.colors.text }}"
+          >
+            <h2 class="portfolio__heading splt">{{ project.title }}</h2>
+            <p class="portfolio__body">{{ project.subtitle }}</p>
+            <div class="portfolio__links">
+              <button data-open-modal-trigger="project-modal-{{ forloop.index }}" class="btn btn--outline">Learn More</button>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="portfolio__wrapper mobile">
+      <h2 class="portfolio__title">some of my works</h2>
+      {% for project in site.data.projects %}
+        {% capture split_id %}{{ forloop.index | plus: 1 }}{% endcapture %}
+        <div class="portfolio__item"
+          data-split="{{ split_id }}"
+          data-bg-color="{{ project.colors.bg }}" 
+          data-text-color="{{ project.colors.text }}"
+        >
+          <div class="portfolio__preview project-{{ forloop.index }}">
+            {% if project.image != "" %}
+              {% capture image_src %}/assets/img/{{ project.media.preview }}{% endcapture %}
+              <img class="lazy-load" src="{{ image_src }}"/>
+            {% endif %}
+          </div>
+          <div class="portfolio__content">
+            <h2 class="portfolio__heading splt">{{ project.title }}</h2>
+            <p class="portfolio__body">{{ project.subtitle }}</p>
+            <div class="portfolio__links">
+              <button data-open-modal-trigger="project-modal-{{ forloop.index }}" class="btn btn--outline">Learn More</button>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
