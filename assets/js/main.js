@@ -1,11 +1,14 @@
 (function() {
 
-  const documentBody = document.querySelector('body');
-  const modalOuter = document.querySelector('[data-modal-outer]');
+  const documentBody = document.body;
+  const preloaderOuter = documentBody.querySelector("[data-preloader-outer]");
+  const preloader = preloaderOuter.querySelector("[data-preloader-count]");
+
+  const modalOuter = documentBody.querySelector('[data-modal-outer]');
   const modalWrapper = modalOuter.querySelector('[data-modal-wrapper]');
   const modal = modalOuter.querySelector('[data-modal-container]');
 
-  const gsAnimationA = { opacity: 0, y: 20, ease: "sine.out", stagger: 0.1 };
+  const gsAnimationA = { opacity: 0, y: 20, ease: "sine.out" };
   const gsAnimationB = { opacity: 0, y: 20, ease: "sine.out", stagger: 0.1 };
   const gsAnimationC = { scale: 0.5, opacity: 0, ease: "circ.out" };
 
@@ -14,7 +17,37 @@
     smooth: true 
   });
 
-  _init();
+  window.addEventListener("load", _initPreloader);
+
+  function _initPreloader() {
+    var start = 0;
+    var end = 100;
+    const tl = gsap.timeline();
+
+    tl
+      .fromTo(preloader, {
+        innerText: start
+      },
+      {
+        innerText: end,
+        duration: 2.5,
+        onUpdate: () => {
+          preloader.textContent = `${parseInt(preloader.innerText)}%`;
+        }
+      })
+      .to(preloader, {
+        opacity: 0,
+        ease: "sine.out",
+        onComplete: () => {
+          tl.to(preloaderOuter, {
+            visibility: "hidden",
+            opacity: 0,
+            duration: 0.01
+          });
+          _init();
+        }
+      })
+  }
 
   function _init() {
     splt({});
@@ -266,7 +299,7 @@
       
       tl
         .to(titleFirstPathsDesktop, {
-          delay: 1,
+          delay: 0.5,
           yPercent: 0,
           ease: "power1.out",
           duration: 0.5
@@ -278,6 +311,7 @@
         })
         .to(backdrop, {
           '--d1': '25%',
+          opacity: 1,
           duration: 0.5,
           delay: 0.5,
           ease: 'back.out(2)',
@@ -303,7 +337,7 @@
                 pin: '.hero__background',
                 pinnedContainer: section,
                 start: "top top",
-                end: "80% top",
+                end: "bottom top",
                 scrub: 1
               }
             })

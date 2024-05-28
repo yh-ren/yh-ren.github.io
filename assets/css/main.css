@@ -628,6 +628,39 @@ section .wrapper {
 }
 
 /**
+ * Preloader
+ */
+
+.loader__wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 8000;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: rgba(245, 245, 247, 0.5);
+  background: rgb(35, 35, 37);
+}
+
+.loader__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loader__content span {
+  font-family: var(--font-family-heading);
+  font-weight: 500;
+  font-size: var(--h5);
+}
+
+/**
  * Hero section
  */
 
@@ -713,6 +746,7 @@ section .wrapper {
     rgba(0, 0, 0, 0.1) calc(var(--d3, 0%) + 0.1%),
     transparent 0
   );
+  opacity: 0;
   background-size: 200%;
   mask-image: var(--mask);
   -webkit-mask-image: var(--mask);
