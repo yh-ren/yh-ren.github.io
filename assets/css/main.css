@@ -87,6 +87,15 @@
   pointer-events: none;
 }
 
+html {
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
 /**
  * Reset some basic elements
  */
@@ -112,7 +121,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column; */
-  overflow: hidden; 
+  overflow-y: scroll;
 }
 
 /**
