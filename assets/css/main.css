@@ -832,7 +832,6 @@ section .wrapper {
 .about__skills__content {
   margin-top: 1.5rem;
   display: flex;
-  flex-wrap: wrap;
   column-gap: calc(var(--gutter) * 0.75);
   row-gap: calc(var(--gutter) * 0.75);
 }
@@ -1038,7 +1037,6 @@ section .wrapper {
   left: 0;
   right: 0;
   bottom: 0;
-  backdrop-filter: brightness(0.8);
   z-index: 8000;
   overflow: auto;
   transition: all 0.2s ease;
